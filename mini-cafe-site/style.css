@@ -7,7 +7,7 @@ body {
 }
 
 header {
-  background-color: darkcyan;
+  background-color: black;
   padding: 20px;
   text-align: center;
 }
@@ -16,7 +16,7 @@ nav ul {
   display: flex;
   justify-content: center;
   list-style: none;
-  background-color: dark yellow;
+  background-color: violet;
   margin: 0;
   padding: 10px;
 }

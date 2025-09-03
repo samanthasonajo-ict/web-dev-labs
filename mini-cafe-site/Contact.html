@@ -14,23 +14,32 @@
 
   <main>
     <section>
-      <h2>Visit Us</h2>
+      <h2>📍 Come Visit Us</h2>
       <p>021 Kyupal Street, Taft Avenue, Metro Manila</p>
+      <p>🕒 Opening Hours: 7:00 AM – 5:00 PM</p>
+      <p>📧 Email: imnida@coupalcafe.com</p>
     </section>
 
     <section>
-      <h2>Message Us</h2>
+        <hr>
+      <h2>✉️ Message Us</h2>
       <form>
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name"><br><br>
+        <div>
+          <label for="name">Full Name</label><br>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div><br>
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email"><br><br>
+        <div>
+          <label for="email">Email Address</label><br>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div><br>
 
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="5" cols="30"></textarea><br><br>
+        <div>
+          <label for="message">Your Message</label><br>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+        </div><br>
 
-        <button type="submit">Send</button>
+        <button type="submit">Send Message</button>
       </form>
     </section>
   </main>
