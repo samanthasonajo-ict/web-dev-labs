@@ -1,32 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Travel Blog</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinations | Travel PH</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>My Travel Blog</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="boracay.html">Boracay</a>
-            <a href="palawan.html">Puerto Princesa</a>
-        </nav>
-    </header>
 
-    <main>
-        <article>
-            <h2>Welcome to My Travel Blog</h2>
-            <p>Join me as I share my travel adventures across the Philippines. From world-famous beaches to natural wonders, 
-            each destination offers something unforgettable.</p>
-        </article>
-    </main>
+  <header>
+    <h1>Explore the Philippines</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destination.html" class="active">Destinations</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <footer>
-        <p>&copy; 2025 My Travel Blog. All rights reserved.</p>
-        <p>Follow me on <a href="https://www.instagram.com/travels_by_me" target="_blank">Instagram</a></p>
-    </footer>
+  <main>
+
+    <section class="destination">
+      <h2>Boracay Island</h2>
+      <p>
+        Famous for its powdery white sand and crystal-clear waters, Boracay is one of the Philippines’ most popular tourist destinations. 
+        Whether you’re seeking vibrant nightlife, water adventures, or simply a peaceful walk along White Beach, Boracay has something for everyone.
+      </p>
+
+      <div class="media-container">
+
+        <div class="video">
+          <h3>Discover Boracay</h3>
+          <iframe width="560" height="315" 
+              src="https://www.youtube.com/embed/b7LSsKsJGHY" 
+              title="Boracay YouTube video" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="map">
+          <h3>Find Boracay on the Map</h3>
+          <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7955.23128462221!2d118.734067!3d9.739174" 
+              width="600" 
+              height="450" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="destination">
+      <h2>Puerto Princesa, Palawan</h2>
+      <p>
+        Known as the gateway to paradise, Puerto Princesa is home to stunning beaches, 
+        breathtaking limestone cliffs, and the world-famous Underground River. 
+        A perfect mix of adventure and relaxation awaits every traveler here.
+      </p>
+
+      <div class="media-container">
+        <div class="video">
+          <h3>Discover Palawan</h3>
+          <iframe width="560" height="315" 
+              src="https://www.youtube.com/embed/U-U3yE6dyXA" 
+              title="Palawan YouTube video" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="map">
+          <h3>Find Palawan on the Map</h3>
+          <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32666.319759033354!2d118.726453!3d9.740074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33b5bdb0e25716e5%3A0x1a8d4e07d671c5b2!2sPuerto%20Princesa%2C%20Palawan!5e0!3m2!1sen!2sph!4v1693918462345!5m2!1sen!2sph" 
+              width="600" 
+              height="450" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Travel PH | Discover Paradise</p>
+  </footer>
+
 </body>
 </html>

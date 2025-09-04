@@ -5,14 +5,12 @@
     font-family: "Arial", sans-serif;
 }
 
-/* Body style */
 body {
-    background-color: #f0f9ff; /* light sky blue background */
+    background-color: #f0f9ff; 
     color: #333;
     line-height: 1.6;
 }
 
-/* Header */
 header {
     background: linear-gradient(to right, #0099ff, #00ccff);
     color: white;
@@ -26,7 +24,6 @@ header h1 {
     font-size: 2rem;
 }
 
-/* Navigation */
 nav {
     margin-top: 10px;
 }
