@@ -1,14 +1,14 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background-color: #0d4323;
+  background-color: rgb(144, 188, 75);
   color: #eaecea;
 }
 
 header {
-  background: #6b4a89;
+  background: rgba(22, 164, 22, 0.548);
   color: #fff;
   padding: 20px;
   text-align: center;
@@ -37,7 +37,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: white;
+  color: rgb(130, 105, 105);
   font-weight: bold;
   padding: 8px 12px;
   border-radius: 4px;
@@ -66,7 +66,7 @@ iframe {
 }
 
 footer {
-  background: #6b4a89;
+  background: darkgreen;
   color: #fff;
   text-align: center;
   padding: 10px;
