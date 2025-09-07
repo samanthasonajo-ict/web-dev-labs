@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Styling</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .content-container {
+            display: flex; 
+            justify-content: space-around; 
+            flex-wrap: wrap; 
+        }
+
+        /* Internal CSS */
+        .box {
+            width: 30%; 
+            min-width: 250px; 
+            padding: 20px; 
+            margin-bottom: 20px;
+            border-radius: 10px; 
+            box-shadow: 3px 3px 8px rgba(0,0,0,0.1); 
+            text-align: center;
+        }
+
+        .box-1 {
+            background-color: #ff6f61; 
+            border: 5px dashed #c0392b; 
+        }
+
+        .box-2 {
+            background-color: #6b5b95; 
+            border: 3px dotted #333; 
+            padding: 30px 15px; 
+        }
+
+        .box-3 {
+            background-color: #00a8cc; 
+            border: 4px solid #0077b6; 
+            border-radius: 15px 0 15px 0; 
+        }
+
+        .box h3 {
+            margin-top: 0;
+            font-size: 24px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        .box p {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+  
+    </style>
+</head>
+<body>
+    <div class="content-container">
+        <div class="box box-1">
+            <h3>Box One</h3>
+            <p>This box features a dashed border and a vibrant coral red background. It's designed to catch the eye!</p>
+        </div>
+
+        <div class="box box-2">
+            <h3>Box Two</h3>
+            <p>A solid violet background with a dotted dark border. The padding here is slightly adjusted for a different feel.</p>
+        </div>
+
+        <div class="box box-3">
+            <h3>Box Three</h3>
+            <p>This cyan box has a solid blue border and unique, alternating rounded corners for a distinct look.</p>
+        </div>
+    </div>
+</body>
+</html>
