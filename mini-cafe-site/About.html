@@ -3,32 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <title>About Us | Haven Café</title>
-  <link rel="stylesheet" href="style.css">
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="about-style.css">
 </head>
 <body>
 
   <header>
     <h1>About Haven Café</h1>
-    <p>Brewed with Heart, Shared with Stories </p>
+    <p>Brewed with Heart, Shared with Stories</p>
   </header>
 
   <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="Menu.html">Menu</a></li>
-            <li><a href="About.html">About Us</a></li>
-            <li><a href="Contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Menu.html">Menu</a></li>
+      <li><a href="About.html">About Us</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
   <main>
-    <section>
-      <h2>Our Story</h2>
-      <p>Our café began with a dream to share conversations over coffee and has grown into a place where warmth and community blend in every cup.</p>
+    <!-- Flexbox two-column -->
+    <section class="story-section">
+      <div class="story-text">
+        <h2>Our Story</h2>
+        <p>Our café began with a dream to share conversations over coffee and has grown into a place where warmth and community blend in every cup.</p>
+        <p>We welcome everyone as family, making sure each visit feels like home.</p>
+      </div>
+      <div class="story-image">
+        <img src="coffee.jpg" alt="Haven Café Interior">
+      </div>
     </section>
 
-    <section>
-      <p>We welcome everyone as family, making sure each visit feels like home.</p>
+    <!-- Grid layout -->
+    <section class="values">
+      <div class="value-box">
+        <h3>Warmth</h3>
+        <p>A cozy place that feels like home.</p>
+      </div>
+      <div class="value-box">
+        <h3>Quality</h3>
+        <p>Freshly brewed coffee made with love.</p>
+      </div>
+      <div class="value-box">
+        <h3>Community</h3>
+        <p>Connecting people one cup at a time.</p>
+      </div>
     </section>
   </main>
 
