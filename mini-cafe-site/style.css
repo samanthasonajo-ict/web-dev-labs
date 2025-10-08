@@ -89,3 +89,84 @@ section img {
     margin: 20px auto;
 }
 
+/* Contact Page Specific Styles */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+
+.contact-box {
+  background-color: #3e1010;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  color: white;
+}
+
+
+.contact-box h2 {
+  margin-bottom: 15px;
+  border-bottom: 2px solid white;
+  padding-bottom: 10px;
+  font-size: 22px;
+  color: white;
+}
+
+
+.contact-box .form-control {
+  border-radius: 6px;
+  margin-bottom: 15px;
+  background-color: rgb(235, 230, 230);
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px;
+}
+
+.contact-box .form-control::placeholder {
+  color: #4e1919;
+}
+
+
+.contact-box .btn-primary {
+  background-color: violet;
+  border: none;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 10px 20px;
+}
+
+.contact-box .btn-primary:hover {
+  background-color: #b300b3;
+}
+
+
+@media (min-width: 768px) {
+  .contact-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+.gallery-page main {
+  max-width: 1200px;
+}
+
+.gallery-page .card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-page .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+
