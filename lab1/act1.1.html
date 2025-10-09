@@ -1,60 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 1 - Ressponsive</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 1 - Responsive</title>
 
-    <style>
-        body {
-            font-family: "Poppins", sans-serif;
-            background: linear-gradient(180deg, #f3e5f5, #e1bee7);
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start; 
-            align-items: center;
-            min-height: 100vh;
-            box-sizing: border-box;
-        }
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(180deg, #f3e5f5, #e1bee7);
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start; /* stays on top but not cropped */
+      box-sizing: border-box;
+      overflow-x: hidden; /* prevent sideways scroll */
+    }
 
-        h1 {
-            color: #6a1b9a;
-            font-size: 2rem;
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            background: #fff;
-            padding: 20px 40px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            margin-top: 120px; 
-            max-width: 90%;
-            word-wrap: break-word;
-        }
+    h1 {
+      color: #6a1b9a;
+      font-size: 2.5rem;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      background: #fff;
+      padding: 20px 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      margin-top: 15vh; /* adjusts based on screen height */
+      max-width: 90%;
+      word-wrap: break-word;
+    }
 
+    /* Tablets */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+        padding: 15px 25px;
+        margin-top: 12vh;
+      }
+    }
 
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 1.8rem;
-                padding: 15px 25px;
-                margin-top: 100px;
-            }
-        }
+    /* Phones */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.6rem;
+        padding: 12px 20px;
+        margin-top: 10vh;
+      }
+    }
 
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.4rem;
-                padding: 12px 20px;
-                margin-top: 80px;
-            }
-        }
-    </style>
+    /* Very small screens (e.g., older phones) */
+    @media (max-width: 360px) {
+      h1 {
+        font-size: 1.4rem;
+        padding: 10px 15px;
+        margin-top: 8vh;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <h1>Anyeonghaseyo Imnida</h1>
+  <h1>Anyeonghaseyo Imnida</h1>
 
 </body>
 </html>
