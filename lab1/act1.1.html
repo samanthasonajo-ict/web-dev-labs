@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 1</title>
+    <title>Lab 1 - Ressponsive</title>
 
     <style>
         body {
             font-family: "Poppins", sans-serif;
             background: linear-gradient(180deg, #f3e5f5, #e1bee7);
             margin: 0;
-            padding: 40px;
+            padding: 20px;
             display: flex;
             flex-direction: column;
             justify-content: flex-start; 
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
+            box-sizing: border-box;
         }
 
         h1 {
             color: #6a1b9a;
-            font-size: 32px;
+            font-size: 2rem;
             text-align: center;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -28,8 +29,12 @@
             padding: 20px 40px;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            margin-top: 130px; 
+            margin-top: 120px; 
+            max-width: 90%;
+            word-wrap: break-word;
         }
+
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 1.8rem;
