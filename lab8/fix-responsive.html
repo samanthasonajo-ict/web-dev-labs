@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Activity 3: Media Queries</title>
+  <title>Activity 2: Error Identification</title>
   <style>
     body {
       font-family: "Poppins", sans-serif;
-      background: linear-gradient(180deg, #f3e5f5, #e1bee7);
+      background: linear-gradient(180deg, #e1f5fe, #bbdefb);
       margin: 0;
       padding: 40px;
       display: flex;
@@ -17,7 +17,7 @@
 
     h1 {
       text-align: center;
-      color: #6a1b9a;
+      color: #0d47a1;
       margin-bottom: 25px;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -33,15 +33,15 @@
     }
 
     h2 {
-      color: #8e24aa;
-      border-bottom: 2px solid #ce93d8;
+      color: #1565c0;
+      border-bottom: 2px solid #90caf9;
       padding-bottom: 5px;
       margin-bottom: 15px;
     }
 
     pre {
-      background: #f3e5f5;
-      border-left: 5px solid #8e24aa;
+      background: #e3f2fd;
+      border-left: 5px solid #1565c0;
       padding: 15px;
       overflow-x: auto;
       font-family: "Courier New", monospace;
@@ -58,19 +58,13 @@
 </head>
 <body>
 
-  <h1>Activity 3: Media Queries</h1>
+  <h1>Activity 2: Error Identification</h1>
 
   <section>
-    <h2>Completed Code Snippet</h2>
+    <h2>Corrected Code Snippet</h2>
     <pre>
-@media (max-width: 480px) {
-  body {
-    font-size: 14px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
+@media (min-width: 600px) {
+  .box {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -78,10 +72,10 @@
     </pre>
 
     <p class="note">
-      💡 Explanation:  
-      • <code>max-width</code> is used for small screens (phones).  
-      • <code>min-width</code> applies to larger devices (desktops).  
-      • The layout becomes two-column when screen width ≥ 1024px.
+      ✅ Corrections made:  
+      • Added parentheses after <code>@media</code><br>
+      • Changed <code>grid-columns</code> → <code>grid-template-columns</code><br>
+      • Used <code>display: grid</code> for correct layout
     </p>
   </section>
 
