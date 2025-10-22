@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Event</title>
+  <style>
+    body {
+      background-color: lavender;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+      text-align: center;
+      padding-top: 80px;
+    }
+    input, button {
+      padding: 8px;
+      margin: 5px;
+      border-radius: 6px;
+      border: 1px solid gray;
+    }
+    button {
+      background-color: rgb(211, 36, 211);
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: darkmagenta;
+    }
+  </style>
+</head>
+<body>
+  <h2>Activity 6: Thank You Message</h2> <br>
+
+  <label for="name">Enter your name:</label>
+  <input type="text" id="name" placeholder="Your name">
+  <button onclick="sayThanks()">SUBMIT</button>
+
+  <script>
+    function sayThanks() {
+      let userName = document.getElementById("name").value;
+      alert("Thank you, " + userName + "!");
+    }
+  </script>
+</body>
+</html>
