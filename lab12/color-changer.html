@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Background Changer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+      transition: background-color 0.5s;
+      background-color: #f8edeb;
+    }
+    select, button {
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      border: none;
+    }
+    button {
+      background-color: #bde0fe;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    function changeBackground() {
+      const color = document.getElementById("colorSelect").value;
+      document.body.style.backgroundColor = color;
+    }
+  </script>
+</head>
+<body>
+  <h2>🎨 Choose a Background Color</h2>
+  <select id="colorSelect">
+    <option value="lightblue">Light Blue</option>
+    <option value="lightgreen">Light Green</option>
+    <option value="lightpink">Light Pink</option>
+    <option value="#fefae0">Light Yellow</option>
+  </select>
+  <button onclick="changeBackground()">Change Background</button>
+</body>
+</html>

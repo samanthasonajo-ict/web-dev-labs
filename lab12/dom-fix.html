@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Error Fix</title>
+  <style>
+    body {
+      background-color: #e2f0cb; 
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      color: #3e2723;
+    }
+
+    h2 {
+      color: #3e2723;
+      background-color: #cce3de; 
+      padding: 15px;
+      border-radius: 10px;
+      width: 60%;
+      margin: 0 auto 30px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+
+    button {
+      background-color: #bde0fe; 
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      color: #3e2723;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #a2d2ff;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h2>Activity 2: Error Identification</h2>
+
+  <h1 id="title">Welcome!</h1>
+  <button onclick="changeTitle()">Change Title</button>
+
+  <script>
+    function changeTitle() {
+      document.getElementById("title").innerHTML = "Updated!";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic Table</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fefae0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .frame-box {
+      background-color: #fff;
+      border: 3px solid #b08968;
+      border-radius: 15px;
+      padding: 40px;
+      width: 80%;
+      max-width: 700px;
+      min-height: 380px; 
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      text-align: center;
+      color: #3e2723;
+      margin-bottom: 25px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 15px;
+      border: 1px solid #ccd5ae;
+      text-align: center;
+    }
+
+    th {
+      background-color: #d4a373;
+      color: #fff;
+    }
+
+    tr:nth-child(even) {
+      background-color: #faedcd;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #fefae0;
+    }
+
+
+    tr:hover {
+      background-color: #f9dcc4;
+      transform: scale(1.01);
+      transition: all 0.2s ease;
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const data = [
+        { name: "Apple", quantity: 10, price: 25 },
+        { name: "Banana", quantity: 5, price: 15 },
+        { name: "Orange", quantity: 8, price: 20 },
+        { name: "Grapes", quantity: 12, price: 30 }
+      ];
+
+      const table = document.createElement("table");
+      const header = document.createElement("tr");
+      header.innerHTML = "<th>Fruit</th><th>Quantity</th><th>Price</th>";
+      table.appendChild(header);
+
+      for (let i = 0; i < data.length; i++) {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td>${data[i].name}</td>
+          <td>${data[i].quantity}</td>
+          <td>${data[i].price}</td>
+        `;
+        table.appendChild(row);
+      }
+
+      document.querySelector(".frame-box").appendChild(table);
+    });
+  </script>
+</head>
+<body>
+  <div class="frame-box">
+    <h2>🍓 Fruit Inventory Table</h2>
+  </div>
+</body>
+</html>
