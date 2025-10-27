@@ -156,11 +156,11 @@ section img {
 
 
 .contact-box .btn-primary {
-  background-color: violet;
+  background-color: rgb(197, 58, 197);
   border: none;
   font-weight: bold;
   border-radius: 6px;
-  padding: 10px 20px;
+  padding: 10px 15px;
 }
 
 .contact-box .btn-primary:hover {

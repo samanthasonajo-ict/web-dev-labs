@@ -2,6 +2,10 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
+  justify-content: center;   /* ✅ ADDED - horizontally center the grid */
+  align-items: flex-start;    /* ✅ ADDED - keeps them from being too low */
+  margin: 0 auto;             /* ✅ ADDED - centers the container in page */
+  max-width: 900px;
 }
 
 

@@ -6,19 +6,39 @@
     body {
       background-color: lavender;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+      display: flex;
+      justify-content: center;
+      padding-top: 90px;
+      margin-top: 0px;
+      height: 80vh;
+    }
+    .frame {
+      background-color: white;
+      border: 3px solid purple;
+      border-radius: 10px;
+      width: 350px;
+      padding: 30px;
       text-align: center;
-      padding-top: 80px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    h2 {
+      color: purple;
+      margin-bottom: 20px;
     }
     input, button {
-      padding: 8px;
-      margin: 5px;
+      padding: 10px;
+      margin: 8px;
+      width: 80%;
       border-radius: 6px;
       border: 1px solid gray;
+      font-size: 14px;
     }
     button {
-      background-color: rgb(211, 36, 211);
+      background-color: purple;
       color: white;
+      border: none;
       cursor: pointer;
+      transition: 0.3s;
     }
     button:hover {
       background-color: darkmagenta;
@@ -26,15 +46,16 @@
   </style>
 </head>
 <body>
-  <h2>Activity 6: Thank You Message</h2> <br>
-
-  <label for="name">Enter your name:</label>
-  <input type="text" id="name" placeholder="Your name">
-  <button onclick="sayThanks()">SUBMIT</button>
+  <div class="frame">
+    <h2>Activity 6: Thank You Message</h2> <br>
+    <label for="name">Enter your name:</label><br>
+    <input type="text" id="name" placeholder="Your name"><br>
+    <button onclick="sayThanks()">Submit</button>
+  </div>
 
   <script>
     function sayThanks() {
-      let userName = document.getElementById("name").value;
+      const userName = document.getElementById("name").value;
       alert("Thank you, " + userName + "!");
     }
   </script>
