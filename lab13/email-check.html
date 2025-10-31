@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity 5 - Email Check</title>
+  <style>
+    body {
+      background-color: #D0E6A5;
+      text-align: center;
+      padding-top: 80px;
+      font-family: 'Trebuchet MS';
+    }
+    input { margin: 8px; padding: 8px; width: 220px; }
+    #msg { margin-top: 15px; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <h2>Activity 5: Email Format Validator</h2>
+  <form id="emailForm">
+    <input type="email" id="email" placeholder="Enter your email" required><br>
+    <button type="submit">Check</button>
+  </form>
+  <div id="msg"></div>
+
+  <script>
+    document.getElementById("emailForm").onsubmit = function(event) {
+      event.preventDefault();
+      let email = document.getElementById("email").value;
+      let msg = document.getElementById("msg");
+
+      if (email.includes("@") && email.includes(".")) {
+        msg.textContent = "✅ Email accepted!";
+        msg.style.color = "green";
+      } else {
+        msg.textContent = "❌ Invalid email format!";
+        msg.style.color = "red";
+      }
+    };
+  </script>
+
+</body>
+</html>

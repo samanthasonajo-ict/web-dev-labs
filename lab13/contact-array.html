@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity 4 - Contact Array</title>
+  <style>
+    body {
+      background-color: #FAD2E1;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      text-align: center;
+      padding-top: 70px;
+    }
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+    input, textarea {
+      margin: 8px;
+      padding: 8px;
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Activity 4: Contact Form with Array Storage</h2>
+  <form id="contactForm">
+    <input type="text" id="name" placeholder="Name" required><br>
+    <textarea id="message" placeholder="Message" required></textarea><br>
+    <button type="submit">Send</button>
+  </form>
+
+  <h3>Submitted Messages:</h3>
+  <ul id="output"></ul>
+
+  <script>
+    const contacts = [];
+
+    document.getElementById("contactForm").onsubmit = function(event) {
+      event.preventDefault();
+      let name = document.getElementById("name").value;
+      let msg = document.getElementById("message").value;
+
+      contacts.push({ name, msg });
+
+      let output = document.getElementById("output");
+      output.innerHTML = "";
+      contacts.forEach((c) => {
+        let li = document.createElement("li");
+        li.textContent = `${c.name}: ${c.msg}`;
+        output.appendChild(li);
+      });
+
+      document.getElementById("contactForm").reset();
+    };
+  </script>
+
+</body>
+</html>

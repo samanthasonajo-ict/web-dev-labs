@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity 6 - Reservation Form</title>
+  <style>
+    body {
+      background-color: #C9C9FF;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      text-align: center;
+      padding-top: 60px;
+    }
+    form {
+      background: white;
+      display: inline-block;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input { margin: 8px; padding: 8px; width: 220px; }
+    #output { margin-top: 20px; }
+  </style>
+</head>
+<body>
+
+  <h2>Activity 6: Reservation Form</h2>
+  <form id="reservationForm">
+    <input type="text" id="name" placeholder="Name" required><br>
+    <input type="date" id="date" required><br>
+    <input type="time" id="time" required><br>
+    <input type="number" id="guests" placeholder="Guests" required><br>
+    <button type="submit">Reserve</button>
+  </form>
+
+  <div id="output"></div>
+
+  <script>
+    document.getElementById("reservationForm").onsubmit = function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const date = document.getElementById("date").value;
+      const time = document.getElementById("time").value;
+      const guests = document.getElementById("guests").value;
+      const output = document.getElementById("output");
+
+      if (!name || !date || !time || !guests) {
+        output.innerHTML = "<p style='color:red;'>⚠️ Please fill out all fields.</p>";
+        return;
+      }
+
+      output.innerHTML = `
+        <h3>Reservation Details</h3>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Date:</strong> ${date}</p>
+        <p><strong>Time:</strong> ${time}</p>
+        <p><strong>Guests:</strong> ${guests}</p>
+        <p style='color:green;'>✅ Reservation successfully recorded!</p>
+      `;
+
+      document.getElementById("reservationForm").reset();
+    };
+  </script>
+
+</body>
+</html>

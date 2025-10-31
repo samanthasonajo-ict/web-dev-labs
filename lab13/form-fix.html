@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity 2 - Form Fix</title>
+  <style>
+    body {
+      background-color: #E4F9F5;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      text-align: center;
+      margin-top: 80px;
+    }
+    form {
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: inline-block;
+    }
+    input { padding: 8px; margin: 6px; }
+  </style>
+</head>
+<body>
+
+  <h2>Activity 2: Fixed Form Validation</h2>
+  <form onsubmit="return validateForm()">
+    <input type="text" id="name" placeholder="Enter your name"><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    function validateForm() {
+      let name = document.getElementById("name").value;
+      if (name === "") {
+        alert("Please enter your name.");
+        return false;
+      } else {
+        alert("Welcome, " + name + "!");
+        return true;
+      }
+    }
+  </script>
+
+</body>
+</html>
