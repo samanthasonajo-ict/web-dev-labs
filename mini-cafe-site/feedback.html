@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback | Haven Café</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="feedback-page">
+
+  <header>
+    <h1>☕ Haven Café</h1>
+    <p>Brewed with Heart, Shared with Stories!</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="feedback.html" class="active">Feedback</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="contact-box">
+      <h2>Share Your Feedback</h2>
+      <form id="feedbackForm">
+        <input type="text" id="name" class="form-control" placeholder="Your Name">
+        <input type="email" id="email" class="form-control" placeholder="Your Email">
+        <textarea id="message" class="form-control" rows="4" placeholder="Your Feedback Message (at least 6 characters)"></textarea>
+        <button type="submit" class="btn-primary">Submit Feedback</button>
+      </form>
+      <p id="successMsg" class="success"></p>
+    </section>
+
+    <section class="contact-box">
+      <h2>Previous Feedback</h2>
+      <div id="feedbackList">
+        <p>No feedback yet. Be the first to share!</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Haven Café. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('feedbackForm');
+    const successMsg = document.getElementById('successMsg');
+    const feedbackList = document.getElementById('feedbackList');
+
+    // ✅ OWNER MODE (change to false to hide Remove buttons)
+    const isOwner = true; // 🔒 Only you can toggle this
+
+    document.addEventListener('DOMContentLoaded', loadFeedbacks);
+
+    function loadFeedbacks() {
+      const saved = JSON.parse(localStorage.getItem('feedbacks')) || [];
+      feedbackList.innerHTML = "";
+
+      if (saved.length === 0) {
+        feedbackList.innerHTML = "<p>No feedback yet. Be the first to share!</p>";
+        return;
+      }
+
+      saved.forEach((item, index) => {
+        const div = document.createElement('div');
+        div.classList.add('feedback-item');
+        div.innerHTML = `
+          <strong>${item.name}</strong> (${item.email})<br>${item.message}
+          ${isOwner ? `<button class="remove-btn" data-index="${index}">Remove</button>` : ''}
+        `;
+        feedbackList.appendChild(div);
+      });
+    }
+
+    // 🗑️ Handle Remove button click
+    feedbackList.addEventListener('click', function(e) {
+      if (e.target.classList.contains('remove-btn')) {
+        const index = e.target.getAttribute('data-index');
+        const saved = JSON.parse(localStorage.getItem('feedbacks')) || [];
+        saved.splice(index, 1); // Remove the selected feedback
+        localStorage.setItem('feedbacks', JSON.stringify(saved));
+        loadFeedbacks(); // Refresh list
+      }
+    });
+
+    // 📨 Handle Submit Feedback
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (name === "") {
+        alert("Please enter your name.");
+        return;
+      }
+
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (!email.match(emailPattern)) {
+        alert("Please enter a valid email address.");
+        return;
+      }
+
+      if (message.length <= 5) {
+        alert("Your message must be longer than 5 characters.");
+        return;
+      }
+
+      const feedback = { name, email, message };
+      const saved = JSON.parse(localStorage.getItem('feedbacks')) || [];
+      saved.push(feedback);
+      localStorage.setItem('feedbacks', JSON.stringify(saved));
+
+      successMsg.textContent = "Thank you for your feedback!";
+      setTimeout(() => successMsg.textContent = "", 3000);
+
+      form.reset();
+      loadFeedbacks();
+    });
+  </script>
+
+</body>
+</html>

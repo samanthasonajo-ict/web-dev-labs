@@ -1,5 +1,5 @@
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f41df4;
@@ -100,51 +100,34 @@ section img {
     margin: 20px auto;
 }
 
-.main-header {
-  background-color: #000000; /* same café brown tone */
-  color: #fff;
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.main-header h1 {
-  font-size: 32px;
-  margin-bottom: 8px;
-  letter-spacing: 1px;
-}
-
-.main-header p {
-  font-size: 16p;
-  font-style: italic;
-  margin: 0;
-  color: #f5f5f5;
-}
-
-/* Contact Page Specific Styles */
-.contact-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  max-width: 1000px;
-  margin: 20px auto;
-  padding: 0 15px;
+/* -----------------------------------
+   FEEDBACK PAGE STYLES
+----------------------------------- */
+.feedback-page main {
+    max-width: 800px;
 }
 
 
 .contact-box {
   background-color: #3e1010;
-  padding: 20px;
+  padding: 25px;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
   color: white;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
 }
 
+.contact-box:hover {
+  transform: translateY(-3px);
+}
 
 .contact-box h2 {
-  margin-bottom: 15px;
+
   border-bottom: 2px solid white;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
   font-size: 22px;
+  margin-bottom: 15px;
   color: white;
 }
 
@@ -152,29 +135,120 @@ section img {
 .contact-box .form-control {
   border-radius: 6px;
   margin-bottom: 15px;
-  background-color: rgb(235, 230, 230);
-  color: rgb(0, 0, 0);
+  background-color: #f3e6f3;
+  color: #000000;
   border: none;
   padding: 10px;
+  width: 100%;
 }
 
 .contact-box .form-control::placeholder {
-  color: #4e1919;
+  color: #5b1a5b;
 }
 
 
 .contact-box .btn-primary {
-  background-color: rgb(197, 58, 197);
+  background-color: #c715c7;
   border: none;
   font-weight: bold;
   border-radius: 6px;
   padding: 10px 15px;
+  color: #fff;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .contact-box .btn-primary:hover {
   background-color: #b300b3;
+  box-shadow: 0 0 10px #b300b3;
+  transform: scale(1.05);
 }
 
+/* Feedback list */
+#feedbackList {
+  margin-top: 15px;
+}
+
+
+.feedback-item {
+  background-color: #555;
+  padding: 15px;
+  border-left: 5px solid violet;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  color: white;
+  word-wrap: break-word;
+}
+
+.feedback-item strong {
+  color: #ffb3ff;
+}
+
+
+.success {
+  color: lightgreen;
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+.contact-box {
+  animation: fadeSlide 0.5s ease;
+}
+
+/* Light lift effect for feedback items */
+.feedback-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feedback-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 10px rgba(199, 21, 199, 0.6);
+}
+
+/* Optional subtle animation */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.feedback-page main {
+  background-color: #3e1010;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+}
+
+/* Remove button style */
+.remove-btn {
+  background-color: #b300b3;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-top: 10px;
+  cursor: pointer;
+  float: right;
+  transition: all 0.3s ease;
+}
+
+.remove-btn:hover {
+  background-color: #ff00ff;
+  box-shadow: 0 0 10px #ff66ff;
+  transform: scale(1.05);
+}
+/* -----------------------------------
+   END FEEDBACK PAGE STYLES
+----------------------------------- */
 
 @media (min-width: 768px) {
   .contact-container {
@@ -192,21 +266,17 @@ section img {
 
 .main-header h1 {
   font-size: 30px;
-  margin-bottom: 18px; /* adds space below Haven Café */
+  margin-bottom: 18px;
 }
 
 .main-header p {
-  font-size: 16px; /* fixed from 16p */
+  font-size: 16px;
   font-style: italic;
   margin: 0;
   color: #f5f5f5;
 }
 
-/* Gallery Page Specific Styles */
-.gallery-page main {
-  max-width: 1200px;
-}
-
+/* Gallery page card hover effects */
 .gallery-page .card {
   border: none;
   border-radius: 10px;
@@ -219,5 +289,3 @@ section img {
   transform: translateY(-5px);
   box-shadow: 0 10px 15px rgba(0,0,0,0.2);
 }
-
-
