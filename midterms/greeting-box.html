@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Interactive Greeting Box</title>
+<style>
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f8d7da;
+    transition: background 0.5s;
+    font-family: Arial, sans-serif;
+  }
+  .box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 8px #aaa;
+  }
+  button {
+    margin-top: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+  <div class="box">
+    <h2>Interactive Greeting Box</h2>
+    <p id="greet">Have a great day!</p>
+    <button onclick="changeGreeting()">Change Greeting</button>
+  </div>
+
+<script>
+const greetings = [
+  {text: "Have a great day!", color: "#f8d7da"},
+  {text: "Welcome to Web Development!", color: "#d6eaff"},
+  {text: "Keep up the awesome work!", color: "#d4edda"},
+  {text: "You're doing amazing!", color: "#fff3cd"}
+];
+let i = 0;
+
+function changeGreeting() {
+  i = (i + 1) % greetings.length;
+  document.getElementById('greet').textContent = greetings[i].text;
+  document.body.style.background = greetings[i].color;
+}
+</script>
+</body>
+</html>
